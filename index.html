@@ -8,22 +8,8 @@
     <style>
     /* placeholder for CSS */
 
-    header h1{
-        text-align: center;
-        display: grid;
-        grid-template-columns: 1fr auto 1 fr;
-        grid-gap: 20px;
-    }
-
-    @supports (display: grid) {
-        header h1:before,
-        header h1:after {
-            content: "";
-            align-self: center;
-            border-top: 1px solid rgba(37, 46, 63, .5);}
-            }
-        }
-
+    
+    
     #credits{
         font-size: 75%;
         font-style: italic;
@@ -36,14 +22,14 @@
     <script src="functions.js"></script>
     <header>
         <h1>Random Facts</h1>
-        <h2>Available On Demand</h2>>
+        <h2>Available On Demand</h2>
     </header>
     <main>
 <p>Markalope has maintained a list for many years, of things he likes and things thag make him happy. Click the button to display a random selection from this list.</p>
 <button onclick="Function()">Show Me an Item!</button>
 <script>
-console.log(x);
-console.log(y);
+document.write(x);
+document.write(y);
 </script>
 
 <!-- this is the empty div that will display the fact after the button is clicked -->
