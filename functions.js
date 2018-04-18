@@ -5,9 +5,6 @@ The maximum random number is the length of each array.
 */
 
 
-
-
-
 //array of sentence beginings
 
 var sentenceBeginning = [
@@ -85,23 +82,30 @@ var begin = sentenceBeginning[6];
 console.log(begin);
 console.log(x);
 console.log(randomBegin);
+
+
 //function for selecting random fact
 var y = (randomFact.length);
 console.log('current value of y is ' + y);
 
-/*
-var items = Array(523,3452,334,31,...5346);
 
-function rand(min, max) {
+//function for printing the final sentence to the browser
+var printFact = function(){
+document.write(begin + ' ' + ' ' + randomFact[17]);
+}
+printFact();
+
+//Working random item selector code
+function rand(min, y) {
   var offset = min;
-  var range = (max - min) + 1;
+  var range = (y - min) + 1;
 
   var randomNumber = Math.floor( Math.random() * range) + offset;
   return randomNumber;
 }
 
 
-randomNumber = rand(0, items.length - 1);
+randomNumber = rand(0, randomFact.length - 1);
 
-randomItem = items[randomNumber];
-*/
+randomItem = randomFact[randomNumber];
+console.log(randomItem);
