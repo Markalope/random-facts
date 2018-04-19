@@ -71,41 +71,41 @@ var randomFact = [
 
 ];
 
-//function for generating random beginning of sentence
+//setting variables for array lengths
 var x = (sentenceBeginning.length);
-var randomBegin = function() {
-return Math.floor( Math.random() * x ) + 1;
-document.write(sentenceBeginning[randomBegin]);
-};
-randomBegin();
-var begin = sentenceBeginning[6];
-console.log(begin);
-console.log(x);
-console.log(randomBegin);
-
-
-//function for selecting random fact
 var y = (randomFact.length);
-console.log('current value of y is ' + y);
 
 
-//function for printing the final sentence to the browser
-var printFact = function(){
-document.write(begin + ' ' + ' ' + randomFact[17]);
+//Working random item selector code for sentence beginnings
+function rand2(min, x) {
+  var offset2 = min;
+  var range2 = (x - min) + 1;
+
+  var randomNumber2 = Math.floor( Math.random() * range2) + offset2;
+  return randomNumber2;
 }
-printFact();
 
-//Working random item selector code
+randomNumber2 = rand2(0, sentenceBeginning.length - 1);
+
+randomItem2 = sentenceBeginning[randomNumber2];
+
+
+//Working random item selector code for facts
 function rand(min, y) {
-  var offset = min;
-  var range = (y - min) + 1;
+    var offset = min;
+    var range = (y - min) + 1;
+  
+    var randomNumber = Math.floor( Math.random() * range) + offset;
+    return randomNumber;
+  }
+  
+  randomNumber = rand(0, randomFact.length - 1);
+  
+  randomItem = randomFact[randomNumber];
+  
 
-  var randomNumber = Math.floor( Math.random() * range) + offset;
-  return randomNumber;
-}
-
-
-randomNumber = rand(0, randomFact.length - 1);
-
-randomItem = randomFact[randomNumber];
-console.log(randomItem);
+  //function for printing the final sentence to the browser
+var printFact = function(){
+    document.write("<p class=answer>" + randomItem2 + " "  + randomItem + "</p>");
+    }
+    printFact();
