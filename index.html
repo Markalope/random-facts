@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
     <title>Random Fact Generator</title>
     <style>
     /* placeholder for CSS */
+
+    h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    line-height: 51px;
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'Droid Serif', serif;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+
+    .btn {
+  background: #69baf0;
+  background-image: -webkit-linear-gradient(top, #69baf0, #053857);
+  background-image: -moz-linear-gradient(top, #69baf0, #053857);
+  background-image: -ms-linear-gradient(top, #69baf0, #053857);
+  background-image: -o-linear-gradient(top, #69baf0, #053857);
+  background-image: linear-gradient(to bottom, #69baf0, #053857);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  text-shadow: 1px 1px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
     
     #credits{
         font-size: 75%;
@@ -20,19 +72,6 @@
         padding: 10px;
         margin: 10px;
         border-radius: 4px;
-
-    button {
-            font-size: 18pt;
-            background: green;
-            color: white;
-
-
-
-
-        }
-
-
-
     }
 
     </style>
@@ -45,7 +84,7 @@
     </header>
     <main>
 <p>I have maintained a list for many years, of things I like, and things that make me happy. <br>Click the button to display a random selection from this list.</p>
-<button onclick="printFact()">Show Me an Item!</button>
+<button class="btn" onclick="printFact()">Show Me an Item!</button>
 
 
 <!-- this is the empty div that will display the fact after the button is clicked -->

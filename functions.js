@@ -109,3 +109,33 @@ var printFact = function(){
     document.write("<p class=answer>" + randomItem2 + " "  + randomItem + "</p>");
     }
     printFact();
+
+    //Marty's code from Thursday night
+    /* <script>
+        function getSquare() {
+            // find the input with id "input-number":
+            var input = document.getElementById('input-number');
+            // get the input, with name=power, that is checked
+            var power = document
+                .querySelector('input[name=power]:checked');
+            
+            // get the value out of the number input:
+            var x = input.value;
+            // get the value out of the radio button:
+            var exponent = power.value;
+            
+            // calculate the answer:
+            var answer = Math.pow(x, exponent);
+            // get the result div
+            var result = document.getElementById('result');
+            // write the response to the div:
+            result.innerHTML = '<em>' + x 
+                + '</em>' + ' to the <em>' + exponent 
+                + '</em> is <strong>' + answer + '</strong>';
+            // add some style!
+            // result.style.color = 'white';
+            // result.style.background = 'steelblue';
+            result.classList.add('done');
+            // log the answer to the console:
+            console.log(x, 'to the', exponent, 'is', answer);
+        }
